@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LIFO ALGO</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chonburi&family=Crimson+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="lifo.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="nav">
+        <div>
+          <div class="name"><a href="../../index.html">HOME</a></div>
+          <div class="logo">VIRTUAL LAB</div>
+          <div class="button">
+            <div>
+              <div></div>
+              MENU
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="menu">
+        <div class="menu-item">
+          <div>
+            <a href="#">
+              <div class="fcfs">
+                <div class="short-title">FCFS</div>
+                <div class="long-title">
+                  First come<br />
+                  first serve
+                </div>
+              </div>
+            </a>
+            <a href="../SJF/sjf.html">
+              <div class="sjf">
+                <div class="short-title">SJF</div>
+                <div class="long-title">
+                  Shortest job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../LJF/ljf.html">
+              <div class="ljf">
+                <div class="short-title">LJF</div>
+                <div class="long-title">
+                  Longest job<br />
+                  first
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="../RR/rr.html">
+              <div class="rr">
+                <div class="short-title">RR</div>
+                <div class="long-title">Round Robin</div>
+              </div>
+            </a>
+            <a href="../SRJF/srjf.html">
+              <div class="srjf">
+                <div class="short-title">SRJF</div>
+                <div class="long-title">
+                  Shortest<br />
+                  remaining job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../PP/pp.html">
+              <div class="pp">
+                <div class="short-title">PP</div>
+                <div class="long-title">
+                  Prioprity<br />
+                  ( preemptive )
+                </div>
+              </div>
+            </a>
+          </div>
+          <div>
+            <a href="../HRRN/hrrn.html">
+              <div class="hrrn">
+                <div class="short-title">HRRN</div>
+                <div class="long-title">
+                  Highest<br />
+                  response ratio<br />
+                  next
+                </div>
+              </div>
+            </a>
+            <a href="../LRJF/lrjf.html">
+              <div class="lrjf">
+                <div class="short-title">LRJF</div>
+                <div class="long-title">
+                  Longest<br />
+                  remaining job<br />
+                  first
+                </div>
+              </div>
+            </a>
+            <a href="../PNP/pnp.html">
+              <div class="pnp">
+                <div class="short-title">PNP</div>
+                <div class="long-title">
+                  Priority<br />
+                  ( non-preemptive )
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="theory">
+          <div class="theory-heading">
+            <div>LAST IN FIRST OUT</div>
+            <div>L.I.F.O.</div>
+          </div>
+          <div class="theory-text">
+            <div>Basic Theory :</div>
+            <div></div>
+            <div>
+              &emsp;&emsp; Stands for "Last In, First Out." LIFO is an algorithm which follows processing of data in which the last items entered are the first to be removed.
+              Thus the new element is inserted above the existing element. The operating system keeps track of all pages in the memory in a form of stack, the newest page is on the top of the stack. When a page needs to be replaced, page on the top of the stack is selected for removal first.
+              <br />
+              &emsp;&emsp;<b>Advantages</b> LIFO makes it easier to replace the newest page that arrived at last in the main memory.
+
+              Simple data structures are used.
+              
+              Highly efficient.<br />
+
+              &emsp;&emsp;<b>Disadvantages</b>
+              As LIFO follows last in first out so it makes it time consuming to execute tasks which were scheduled first.
+            </div>
+          </div>
+          <div class="theory-step">
+            <ul>
+              <label>STEP 1 :</label>
+              <li>
+                LIFO algorithm can be implemented by creating a stack to store all pages in memory.
+              </li>
+              <label>STEP 2 :</label>
+              <li>Now maintain a stack of all pages currently in main memory and remove the page that is at the top of the stack at the linked list.</li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="visualizer">
+      <div class="error">Invalid Input</div>
+      <div class="container">
+        <div>
+          <div class="buttons">
+            <!-- <div class="play">PLAY</div>
+            <div class="reset">RESET</div> -->
+          </div>
+          <div class="avg-tat">Pages : <span id="pages">0</span></div>
+          <div class="avg-wt">Frames : <span id="frame">0</span></div>
+          <div class="avg-rt">Hits : <span id="hits">0</span></div>
+          <div class="avg-rt">Faults : <span id="faults">0</span></div>
+          <div class="avg-rt">Hit Ratio : <span id="hitr">0</span></div>
+          <div class="avg-rt">Miss Ratio : <span id="missr">0</span></div>
+        </div>
+        <div>
+          <div class="add-process">
+            <div class="input">
+              <div class="arrival">
+                <label for="arrival-time"> Reference String :</label>
+                <input type="text" id="refstr" />
+              </div>
+
+              <div class="burst">
+                <label for="burst-time">Frames :</label>
+                <input type="text" id="frames" />
+              </div>
+            </div>
+            <div class="add" id="submit-btn">PLAY</div>
+          </div>
+
+          <div class="table">
+            <table id="table" class="container text-center"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.anychart.com/releases/8.0.0/js/anychart-base.min.js"></script>
+    <script
+      src="https://cdn.anychart.com/releases/8.0.0/themes/dark_earth.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="fifo.js"></script>
+  </body>
+</html>
